@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 30% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 30% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 30% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 272 91% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 330 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 15% 25%;
+    --input: 260 15% 25%;
+    --ring: 272 91% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 260 30% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 272 91% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 25% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 260 20% 30%;
+    --sidebar-ring: 272 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  .game-card {
+    @apply relative rounded-xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] hover:z-10;
+  }
+  
+  .tournament-card {
+    @apply bg-card rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .wallet-badge {
+    @apply flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .button-primary {
+    @apply bg-gaming-pink text-white rounded-lg px-6 py-3 font-semibold transition-all duration-300 hover:bg-opacity-85 focus:ring-2 focus:ring-gaming-pink focus:ring-opacity-50;
+  }
+  
+  .button-secondary {
+    @apply bg-gaming-blue text-white rounded-lg px-6 py-3 font-semibold transition-all duration-300 hover:bg-opacity-85 focus:ring-2 focus:ring-gaming-blue focus:ring-opacity-50;
+  }
+  
+  .button-accent {
+    @apply bg-gaming-purple text-white rounded-lg px-6 py-3 font-semibold transition-all duration-300 hover:bg-opacity-85 focus:ring-2 focus:ring-gaming-purple focus:ring-opacity-50;
+  }
+  
+  .input-field {
+    @apply bg-muted rounded-lg px-4 py-3 border border-border focus:border-primary focus:ring-1 focus:ring-primary;
+  }
+}
